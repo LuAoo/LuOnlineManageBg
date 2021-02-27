@@ -1,0 +1,19 @@
+.list_page li a{
+    width: 100%;
+    display: inline-block;
+}
+.panel_tt{
+    margin-top: 10px;
+}
+.well img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.media-left {
+    vertical-align: middle;
+}
+.media-right {
+    vertical-align: middle;
+}
+ 

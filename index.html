@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="小鲁在线IT后台管理系统" />
+    <meta name="description" content="该网站用于宣传IT教育" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>小鲁在线IT后台管理系统</title>
+    <link rel="shortcut icon" href="images/Lulogo.png" type="image/x-icon">
+    <!-- bootstrap引入 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/3.7.2/animate.css" rel="stylesheet">
+    <!-- 本地css文件引入 -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+   <!-- nav导航栏 -->
+   <nav class="navbar navbar-default" role="navigation" id="managewr_navbar">
+    <!-- 装入container容器中 -->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">小鲁在线IT后台管理系统</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;后台管理</a>
+                </li>
+                <li><a href="Usermanager.html"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a></li>
+                <li><a href="Contentmanager.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;内容管理</a>
+                </li>
+                <li><a href="Tagmanager.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;标签管理</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;前台首页</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人主页</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;个人设置</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;账户管理</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;我的收藏</a></li>
+                    </ul>
+                </li>
+                <li><a onclick="window.close();"><span class="glyphicon glyphicon-off"></span>&nbsp;退出</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+<!-- 内容区 -->
+<div class="container">
+    <div class="row">
+        <!-- 警告框 -->
+        <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissible fade in" id="myalert" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+                <h4>网站程序有漏洞，急需修复！</h4>
+                <p>当前版本程序(V1.22)存在严重安全问题，容易造成攻击，请即可修复！</p>
+                <p>
+                    <button type="button" class="btn btn-danger" id="alert_bitton1">立即修复</button>
+                    <button type="button" class="btn btn-default" data-dismiss="alert"
+                        id="alert_bitton2">稍后处理</button>
+                </p>
+            </div>
+        </div>
+        <!-- 网站数据统计 -->
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">网站数据统计</div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>统计项目</th>
+                                <th>今日</th>
+                                <th>昨日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>注册会员</th>
+                                <td>200</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <th>登录会员</th>
+                                <td>4100</td>
+                                <td>5112</td>
+                            </tr>
+                            <tr>
+                                <th>今日发帖</th>
+                                <td>1540</td>
+                                <td>4511</td>
+                            </tr>
+                            <tr>
+                                <th>转载次数</th>
+                                <td>150</td>
+                                <td>110</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 网站热帖 -->
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">网站热帖</div>
+                <!-- List group -->
+                <ul class="list-group">
+                    <li class="list-group-item"><a href=""><span
+                                class="glyphicon glyphicon-list-alt"></span>&nbsp;小鲁职业教育,效果和就业为王 <small
+                                class="pull-right">2021-1-4</small></a></li>
+                    <li class="list-group-item"><a href=""><span
+                                class="glyphicon glyphicon-list-alt"></span>&nbsp;小鲁职业教育,效果和就业为王 <small
+                                class="pull-right">2021-1-4</small></a></li>
+                    <li class="list-group-item"><a href=""><span
+                                class="glyphicon glyphicon-list-alt"></span>&nbsp;小鲁职业教育,效果和就业为王 <small
+                                class="pull-right">2021-1-4</small></a></li>
+                    <li class="list-group-item"><a href=""><span
+                                class="glyphicon glyphicon-list-alt"></span>&nbsp;小鲁职业教育,效果和就业为王 <small
+                                class="pull-right">2021-1-4</small></a></li>
+                    <li class="list-group-item"><a href=""><small
+                                class="glyphicon glyphicon-list-alt"></small>&nbsp;小鲁职业教育,效果和就业为王 <small
+                                class="pull-right">2021-1-4</small></a></li>
+                    <li class="list-group-item"><a href=""><span
+                                class="glyphicon glyphicon-list-alt"></span>&nbsp;小鲁职业教育,效果和就业为王 <small
+                                class="pull-right">2021-1-4</small></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 今日访客统计 -->
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">今日访客统计</div>
+                <div class="panel-body">
+                    <div id="main" class="col-md-12" style="height:300px;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 服务器状态 -->
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">服务器状态</div>
+                <div class="panel-body">
+                    <p>内存使用率：40%</p>
+                    <div class="progress">
+                        <div class="active progress-bar progress-bar-success progress-bar-striped"
+                            role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 40%">
+                        </div>
+                    </div>
+                    <p>数据库使用率：20%</p>
+                    <div class="progress">
+                        <div class="active progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            <span class="sr-only">20% Complete</span>
+                        </div>
+                    </div>
+                    <p>磁盘使用率：60%</p>
+                    <div class="progress">
+                        <div class="active progress-bar progress-bar-warning progress-bar-striped"
+                            role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 60%">
+                            <span class="sr-only">60% Complete (warning)</span>
+                        </div>
+                    </div>
+                    <p>CPU使用率：80%</p>
+                    <div class="progress">
+                        <div class="active progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            <span class="sr-only">80% Complete (danger)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 团队留言板 -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">团队留言板</div>
+                <div class="panel-body">
+                    <div class="col-md-7">
+                        <div class="well media">
+                            <div class="media-left">
+                                <a href="">
+                                    <img class="media-object" src="images/head1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4>小刘</h4>
+                                <p>技术大哥，今晚请把网站程序升级一下哈，现在的系统有漏洞，安全起见！</p>
+                            </div>
+                        </div>
+                        <div class="well media">
+                            <div class="media-body text-right">
+                                <h4>技术大哥</h4>
+                                <p>收到，今晚凌晨2点准时升级！</p>
+                            </div>
+                            <div class="media-right">
+                                <a href="">
+                                    <img class="media-object" src="images/head5.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="well media">
+                            <div class="media-body text-right">
+                                <h4>技术大哥</h4>
+                                <p>你先在站点发布一下通知哈！</p>
+                            </div>
+                            <div class="media-right">
+                                <a href="">
+                                    <img class="media-object" src="images/head5.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="well media">
+                            <div class="media-left">
+                                <a href="">
+                                    <img class="media-object" src="images/head1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4>小刘</h4>
+                                <p>好嘞。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">输入留言内容</label>
+                                <textarea class="form-control" id="exampleInputEmail1" rows="6"
+                                 required="required"   placeholder="请输入留言内容"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">留言</button>
+                        </form>
+                        <div class="panel_tt panel panel-default">
+                            <div class="panel-heading">团队联系手册</div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">站长(李小龙)：<span class="
+                                                glyphicon glyphicon-phone"></span>&nbsp;13134848615</li>
+                                    <li class="list-group-item">技术(大牛哥)：<span class="
+                                                glyphicon glyphicon-phone"></span>&nbsp;13456127694</li>
+                                    <li class="list-group-item">推广(张二哥)：<span class="
+                                                glyphicon glyphicon-phone"></span>&nbsp; 13457815482</li>
+                                    <li class="list-group-item">客服(王女士)：<span class="
+                                                glyphicon glyphicon-phone"></span>&nbsp; 13134567782 &nbsp;<span
+                                            class="glyphicon glyphicon-phone-alt"></span>&nbsp; 0371-61171272</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   <!-- fotter栏 -->
+   <div id="footer_tt" class="text-center">
+    <div class="panel-body">
+        © Copyright 2010-2030 小鲁在线IT ICP备1232131号 版权所有
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.0/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- wow引入 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.0.3/wow.js"></script>
+<script src="js/jquery.singlePageNav.min.js"></script>
+<!-- 引入echart -->
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts.js"></script>
+<script>
+    // 初始化wow动画
+    new WOW().init();
+    // 警告框点击事件
+    $('#alert_bitton1').click(function () {
+        alert('我们暂时没有找到解决方案');
+    });
+
+
+
+
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+// 指定图表的配置项和数据
+option = {
+    title: {
+        text: '数据分析图'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data: ['游客', '会员', '超级会员']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+         
+      
+        {
+            name: '超级会员',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            smooth: true,
+            data: [150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name: '会员',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            smooth: true,
+            data: [2500, 2000, 1300, 1400, 1387, 1300, 1211]
+        },
+        {
+            name: '游客',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            smooth: true,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+            data: [2000, 2300, 3100, 2800, 4000, 6000, 7654]
+        },
+    ]
+};
+
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+
+</html>
